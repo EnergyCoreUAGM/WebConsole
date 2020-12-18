@@ -6,285 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="Shervin Firouzdehghan" />
-        <title>Web Console Dashboard</title>
+        <title>Login</title>
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-        <script src="assets/demo/datatables-demo.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-        
-
-            <!-- Jquery JS-->
-        <script src="vendor/jquery-3.2.1.min.js"></script>
-        <!-- Bootstrap JS-->
-        <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-        <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-        <!-- Vendor JS       -->
-        <script src="vendor/slick/slick.min.js">
-        </script>
-        <script src="vendor/wow/wow.min.js"></script>
-        <script src="vendor/animsition/animsition.min.js"></script>
-        <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-        </script>
-        <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendor/counter-up/jquery.counterup.min.js">
-        </script>
-        <script src="vendor/circle-progress/circle-progress.min.js"></script>
-        <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-        <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-        <script src="vendor/select2/select2.min.js"></script>
-
-
-        <!-- Fontfaces CSS-->
-        <link href="css/font-face.css" rel="stylesheet" media="all">
-        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-
-        <!-- Bootstrap CSS-->
-        <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
-
-        <!-- Vendor CSS-->
-        <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-        <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-        <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-        <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-        <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-        <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-        <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
-        <link href="css/font-face.css" rel="stylesheet" media="all">
-        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-        <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <!-- Script for daterangepicker-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
-    <!-- Main CSS-->
-    <link href="css/style.css" rel="stylesheet" media="all">
-    <link href="css/theme.css" rel="stylesheet" media="all">
-        <style>
-      
-            #chart {
-            max-width: 650px;
-            margin: 35px auto;
-          }
-        
-          .toolbar {
-            margin-left: 45px;
-          }
-        
-          button {
-            background: #fff;
-            color: #222;
-            border: 1px solid #e7e7e7;
-            border-bottom: 2px solid #ddd;
-            border-radius: 2px;
-            padding: 4px 17px;
-          }
-        
-          button.active {
-            color: #fff;
-            background: #008FFB;
-            border: 1px solid blue;
-            border-bottom: 2px solid blue;
-          }
-        
-          button:focus {
-            outline: 0;
-          }
-          
-        </style>
-
-        <script>
-            window.Promise ||
-              document.write(
-                '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
-              )
-            window.Promise ||
-              document.write(
-                '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
-              )
-            window.Promise ||
-              document.write(
-                '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
-              )
-          </script>
     </head>
-    <body class="sb-nav-fixed m-5">
-        <nav class="sb-topnav navbar navbar-expand navbar-light bg-primary main-navigation">
-            <img src="assets/img/logo_hems.jpg" width="60" height="60" class="m-3 mt-4 ml-4 ">
-            <!--<a class="navbar-brand" href="#"> Dashboard</a>-->
-            <a class="dropdown-item topnav-right" style="text-align: right; color: #000000;" onclick="logout()" href="#">Logout</a>
-        </nav>
-
-                    <!-- WELCOME-->
-                    <section class="welcome m-t-85" style="text-align:center;">
-                        <h1 class="title-4">Welcome Back
-                            <span id="welcomeBackHeader"></span>
-                        </h1>
-                    </section>
-                    <!-- END WELCOME-->
-        
-                    <!-- STATISTIC-->
-                    <section class="statistic statistic2 mb-0 ">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-3 ">
-                                    <div class="statistic__item statistic__item--orange main-navigation">
-                                        <h2 class="number" id="batteryValueDashboard">00%</h2>
-                                        <span class="desc">Battery</span>
-                                        <div class="icon">
-                                            <i class="zmdi zmdi-battery-flash "></i>
-                                        </div>                                    
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><img src="assets/img/logo_hems.jpg" class="center" style="margin: auto; display: block;" width="350" height="250"></div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" /></div>
+                                            <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" /></div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /></div>
+                                            </div>
+                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"><a class="small" href="password.html">Forgot Password?</a><a class="btn btn-primary" onclick="login()" href="#">Login</a></div>
+                                        </form>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="statistic__item statistic__item--green">
-                                        <h2 class="number" id="generationValueDashboard">000 Wh</h2>
-                                        <span class="desc">Current Months Generation</span>
-                                        <div class="icon">
-                                            <i class="zmdi zmdi-long-arrow-up"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="statistic__item statistic__item--red">
-                                        <h2 class="number" id="consumptionValueDashboard">000 Wh</h2>
-                                        <span class="desc">Current Months Consumption</span>
-                                        <div class="icon">
-                                            <i class="zmdi zmdi-long-arrow-down"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 col-lg-3">
-                                    <div class="statistic__item statistic__item--blue">
-                                        <h2 class="number" id="temperatureValueDashboard">00 F</h2>
-                                        <span class="desc">Temperature</span>
-                                        <div class="icon">
-                                            <i class="zmdi zmdi-sun"></i>
-                                        </div>
+                                    <div class="card-footer text-center">
+                                        <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <!-- END STATISTIC-->
-                
+                    </div>
+                </main>
             </div>
 
-
-            <div class="row">
-                <div class="column">
-                  <div class="card" id="mainChartDiv">
-                       <!-- dropdown menu begins-->
-                    <div style="justify-content: center;" class="mb-2">
-                        <button type="button" class="btn btn-success btn-lg mr-2" onclick="intializeGenerationChart()">Generation</button>
-                        <button type="button" class="btn btn-danger btn-lg ml-2" onclick="intializeMeasurementChart()">Consumption</button>
-                        <button class="btn" onclick="downloadMainChart()"><i class="fa fa-download right-button"></i></button>
-
-                    </div>
-                        <!-- dropdown menu ends-->
-
-                        <!-- Grid for Secondary Chart and table begins-->
-                        <canvas id="mainChart" width="700" height="380"></canvas>
-                    </div>
-                </div>
-                <div class="column">
-                  <div class="card">
-                    <!-- dropdown menu begins-->
-                    <div class="input-group" style="justify-content: center;">
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="startDateRange"/>
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="endDateRange"/>
-                        <select id="select1" onchange="generate2Select();" class="select-css ml-2 mr-2 mb-2">
-                            <option hidden disabled selected value> -- select an option -- </option>
-                            <option value="Generation">Sources</option>
-                            <option value="Measurement">Devices</option>
-                          </select>
-                          <select id="select2" onchange="generateChartFromSelect();" class="select-css mr-2 ml-2 mb-2">
-                            <option hidden disabled selected value> -- select an option -- </option>
-                          </select>
-
-                          <button class="btn" onclick="downloadSecondaryChart()"><i class="fa fa-download right-button2"></i></button>
-
-                        <!-- dropdown menu ends-->
-                    <canvas id="secondaryChart" width="700" height="380"></canvas>
-
-                  </div>
-                </div>
-              </div>
         </div>
-        <!-- Grid for chart and table ends-->
-        <div class="row" style="justify-content: center;">
-            <div class="column">
-                <div class="card mb-4 mr-1" >
-                    <div class="card-header">
-                        <i class="fas fa-table mr-1"></i>
-                        All Time Table                        
-                        <button class="btn" onclick="downloadTableAll()"><i class="fa fa-download right-button"></i></button>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTableAll" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Watts (Wh)</th>
-                                        <th>Current (A)</th>
-                                        <th>Timestamp</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card mb-4 ml-1">
-                    <div class="card-header">
-                        <i class="fas fa-table mr-1"></i>
-                        Queried Table                        
-                        <button class="btn" onclick="downloadTable()"><i class="fa fa-download right-button"></i></button>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Watts (Wh)</th>
-                                        <th>Current (A)</th>
-                                        <th>Timestamp</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-    </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
         <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
 
         <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
 
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -308,22 +69,8 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         </script>
-        <script>
-            $(function() {
-              $('input[name="daterange"]').daterangepicker({
-                opens: 'left'
-              }, function(start, end, label) {
-                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-              });
-            });
-            </script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <!-- these js files are used for making PDF -->
-	    <script src="js/jspdf.js"></script>
-	    <script src="js/jquery-2.1.3.js"></script>
-        <script src="js/pdfFromHTML.js"></script>
-
     </body>
 </html>
