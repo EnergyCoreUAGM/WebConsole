@@ -307,7 +307,6 @@ function intializeGenerationChart(){
                 }]
             },
             options: {
-                
                 scales: {
                     yAxes: [{
                         ticks: {

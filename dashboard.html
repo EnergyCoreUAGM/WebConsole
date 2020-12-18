@@ -120,7 +120,7 @@
               )
           </script>
     </head>
-    <body class="sb-nav-fixed m-5">
+    <body class="sb-nav-fixed m-2">
         <nav class="sb-topnav navbar navbar-expand navbar-light bg-primary main-navigation">
             <img src="assets/img/logo_hems.jpg" width="60" height="60" class="m-3 mt-4 ml-4 ">
             <!--<a class="navbar-brand" href="#"> Dashboard</a>-->
@@ -204,15 +204,15 @@
                   <div class="card">
                     <!-- dropdown menu begins-->
                     <div class="input-group" style="justify-content: center;">
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="startDateRange" required/>
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="endDateRange" required/>
-                        <select id="select1" onchange="generate2Select();" class="select-css ml-2 mr-2 mb-2">
+                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="startDateRange" style="min-width: height 20px;"/>
+                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="endDateRange" style="min-width: height 20px;"/>
+                        <select id="select1" onchange="generate2Select();" class="select-css ml-2 mr-2 mb-2" style="min-width: height 20px;" >
                             <option hidden disabled selected value> -- select an option -- </option>
                             <option value="Generation">Sources</option>
                             <option value="Measurement">Devices</option>
                           </select>
                           <!--<select id="select2" onchange="generateChartFromSelect();" class="select-css mr-2 ml-2 mb-2">-->
-                            <select id="select2" class="select-css mr-2 ml-2 mb-2">
+                            <select id="select2" class="select-css mr-2 ml-2 mb-2" style="min-width: height 20px;" >
                             <option hidden disabled selected value> -- select an option -- </option>
                           </select>
                           <button type="button" class="btn btn-primary btn-md mr-2 mb-2" onclick="generateChartFromSelect()">Get</button>
@@ -227,9 +227,9 @@
               </div>
         </div>
         <!-- Grid for chart and table ends-->
-        <div class="row" style="justify-content: center;">
+        <div class="row" >
             <div class="column">
-                <div class="card mb-4 mr-1" >
+                <div class="card mb-4 mr-1">
                     <div class="card-header">
                         <i class="fas fa-table mr-1"></i>
                         All Time Table                        
@@ -237,7 +237,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTableAll" width="100%" cellspacing="0">
+                            <table class="table table-bordered" id="dataTableAll" width="1" height="1" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
@@ -263,7 +263,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <table class="table table-bordered" id="dataTable" width="1" height="1" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
