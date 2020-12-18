@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="Shervin Firouzdehghan" />
+        <title>Register</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><label class="small mb-1" for="inputFirstNameRegister">First Name</label><input class="form-control py-4" id="inputFirstNameRegister" type="text" placeholder="Enter first name" required/></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><label class="small mb-1" for="inputLastNameRegister">Last Name</label><input class="form-control py-4" id="inputLastNameRegister" type="text" placeholder="Enter last name" required/></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddressRegister">Email</label><input class="form-control py-4" id="inputEmailAddressRegister" type="email" aria-describedby="emailHelp" placeholder="Enter email address" required/></div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><label class="small mb-1" for="inputPasswordRegister">Password</label><input class="form-control py-4" id="inputPasswordRegister" type="password" placeholder="Enter password" required/></div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group"><label class="small mb-1" for="inputConfirmPasswordRegister">Confirm Password</label><input class="form-control py-4" id="inputConfirmPasswordRegister" type="password" placeholder="Confirm password" required/></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" onclick="createUser()" href="#">Create Account</a></div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Web Console 2020</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+            <!-- Add Firebase products that you want to use -->
+            <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    
+            <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    
+    
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    
+            <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCwNctdzQHvogP8Gvyop-Doj5KDbzG-BVk",
+                authDomain: "mobile-application-grid.firebaseapp.com",
+                databaseURL: "https://mobile-application-grid.firebaseio.com",
+                projectId: "mobile-application-grid",
+                storageBucket: "mobile-application-grid.appspot.com",
+                messagingSenderId: "382568698913",
+                appId: "1:382568698913:web:67e4b5492cbb650aa7ff60",
+                measurementId: "G-M1FGTRPQLF"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
