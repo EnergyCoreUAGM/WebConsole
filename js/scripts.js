@@ -35,7 +35,7 @@ function login(){
         firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)//If the username and password fields are entered then they will be sent to their dashboard after being authenticated within Firestore.
         .then((user) => {
             // Signed in 
-            window.location = 'index.html';//Redirecting the user to the corresponding dashboard which is the index.html file.
+            window.location = 'dashboard.html';//Redirecting the user to the corresponding dashboard which is the index.html file.
             window.alert("Signed in" + userEmail);
         })
         .catch((error) => {
@@ -56,7 +56,7 @@ function login(){
 function logout(){
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
-        window.location = 'login.html';//Redirecting the user back to the login page when they are succesfully logged out.
+        window.location = 'index.html';//Redirecting the user back to the login page when they are succesfully logged out.
         window.alert("Sign out succesful");
       }).catch(function(error) {
         // An error happened.
@@ -79,7 +79,7 @@ function resetPassword(){
         firebase.auth().sendPasswordResetEmail(resetEmail).then(function() {
             // Email sent and the user will be redirected to the login page.
             window.alert("Password reset link was sent to your email");
-            window.location = 'login.html';
+            window.location = 'index.html';
         }).catch(function(error) {
             // An error happened.
             var errorMessageResetPassword = error.message;
@@ -107,7 +107,7 @@ function createUser(){
             firebase.auth().createUserWithEmailAndPassword(EmailAddressRegister, ConfirmPasswordRegister)//Calling the createUserWithEmailAndPassword() method from firestore and passing the email and password as arguments where they will be created in the database.
             .then((user) => {
               // Signed in and redirecting user to the login page.
-              window.location = 'login.html';
+              window.location = 'index.html';
             })
             .catch((error) => {
                 //Error happened.
@@ -134,7 +134,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       initializeBatteryStatus();
     } else {
       // No user is signed in.
-        window.location = 'login.html';//Redirecting the user back to the login page when they are succesfully logged out.
+        window.location = 'index.html';//Redirecting the user back to the login page when they are succesfully logged out.
     }
   });
 
