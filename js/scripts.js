@@ -287,7 +287,7 @@ function intializeGenerationChart(){
             arrayDataGeneration.push(doc.get("watts").toPrecision(2));//Pushing the generation Wh into the arrayDataGeneration array to use in the chart.
             arrayTimeGeneration.push(doc.get("timeStamp").toDate().toDateString());//Pushing the timestamp into the arrayTimeGeneration array to use in the chart.
             arrrayComplete.push({timeStamp: doc.get("timeStamp").toDate().toDateString(), watts: doc.get("watts").toPrecision(2)});
-            $("#dataTableAll").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+            $("#dataTableAll").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
         });
         console.log("TestTime " + arrayTimeGeneration);
         console.log("TestData" + arrayDataGeneration);
@@ -348,7 +348,7 @@ function intializeMeasurementChart(){
             arrayDataMeasurement.push(doc.get("watts").toPrecision(2));
             arrayTimeMeasurement.push(doc.get("timeStamp").toDate().toDateString());
             arrrayComplete.push({timeStamp: doc.get("timeStamp").toDate().toDateString(), watts: doc.get("watts").toPrecision(2)});
-            $("#dataTableAll").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+            $("#dataTableAll").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
         });
         console.log("TestTime " + arrayTimeMeasurement);
         console.log("TestData" + arrayDataMeasurement);
@@ -496,7 +496,7 @@ function intializeSecondaryChartAll(collectionForQuery, sourceOrDeviceNameForQue
                 querySnapshot.forEach(function(doc) {
                     arrayGenerationDataSecondaryChart.push(doc.get("watts").toPrecision(2));//Pushing the Wh from the query into the corresponding array.
                     arrayGenerationTimeSecondaryChart.push(doc.get("timeStamp").toDate().toDateString());//Pushing the timeStamp from the query into the corresponding array.
-                    $("#dataTable").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+                    $("#dataTable").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
                 });
                     console.log("arrayGenerationTimeSecondaryChart " + arrayGenerationTimeSecondaryChart);
                     console.log("arrayGenerationDataSecondaryChart" + arrayGenerationDataSecondaryChart);
@@ -545,7 +545,7 @@ function intializeSecondaryChartAll(collectionForQuery, sourceOrDeviceNameForQue
                 querySnapshot.forEach(function(doc) {
                     arrayMeasurementDataSecondaryChart.push(doc.get("watts").toPrecision(2));//Pushing the Wh of the selected device to the array.
                     arrayMeasurementTimeSecondaryChart.push(doc.get("timeStamp").toDate().toDateString());//Pushing the timeStamp of the selected device to the array.
-                    $("#dataTable").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+                    $("#dataTable").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
                 });
                     console.log("arrayMeasurementTimeSecondaryChart " + arrayMeasurementTimeSecondaryChart);
                     console.log("arrayMeasurementDataSecondaryChart" + arrayMeasurementDataSecondaryChart);
@@ -604,7 +604,7 @@ function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery,
                 querySnapshot.forEach(function(doc) {
                     arrayGenerationDataSecondaryChart.push(doc.get("watts").toPrecision(2));//Pushing the Wh from the query into the corresponding array.
                     arrayGenerationTimeSecondaryChart.push(doc.get("timeStamp").toDate().toDateString());//Pushing the timeStamp from the query into the corresponding array.
-                    $("#dataTable").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+                    $("#dataTable").append("<tr><td>"+doc.get("sourceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
                 });
                     console.log("arrayGenerationTimeSecondaryChart " + arrayGenerationTimeSecondaryChart);
                     console.log("arrayGenerationDataSecondaryChart" + arrayGenerationDataSecondaryChart);
@@ -653,7 +653,7 @@ function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery,
                 querySnapshot.forEach(function(doc) {
                     arrayMeasurementDataSecondaryChart.push(doc.get("watts").toPrecision(2));//Pushing the Wh of the selected device to the array.
                     arrayMeasurementTimeSecondaryChart.push(doc.get("timeStamp").toDate().toDateString());//Pushing the timeStamp of the selected device to the array.
-                    $("#dataTable").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
+                    $("#dataTable").append("<tr><td>"+doc.get("deviceID")+"</td><td>"+doc.get("watts")+"</td><td>"+doc.get("current")+"</td><td>"+doc.get("timeStamp").toDate().toDateString()+"</td></tr>");
                 });
                     console.log("arrayMeasurementTimeSecondaryChart " + arrayMeasurementTimeSecondaryChart);
                     console.log("arrayMeasurementDataSecondaryChart" + arrayMeasurementDataSecondaryChart);
