@@ -416,7 +416,7 @@ function generate2Select(){
             }
         })
         .catch(function(error) {
-            console.log("Error getting temperature documents: ", error);
+            console.log("Error getting documents: ", error);
         });
     }
     else{//Else will be used for when the Measurement value is selected in the first select menu.
@@ -440,7 +440,7 @@ function generate2Select(){
             }
         })
         .catch(function(error) {
-            console.log("Error getting temperature documents: ", error);
+            console.log("Error getting documents: ", error);
         });
     }
 }
@@ -462,20 +462,25 @@ function removeOptions(selectElement) {
     var selectedValue2 = selectBox2.options[selectBox2.selectedIndex].value;//Setting the value from the second select menu into a variable.
     var startDateValue = document.getElementById("startDateRange").value;
     var endDateValue = document.getElementById("endDateRange").value;
+    console.log("intial value for start: " +  startDateValue + "End: " + endDateValue);
     var startDate = new Date(startDateValue);
     var endDate = new Date(endDateValue);
-    if(startDateValue != null && startDateValue == "" && endDateValue != null && endDateValue == "" ){
+    console.log("Date value start: " +  startDateValue + "End: " + endDateValue);
+    if(!Date.parse(startDateValue) || !Date.parse(endDateValue)){
         //Calling the intiliazeSecondaryMenu() and passing the selected argument from both select menus.
-        intializeSecondaryChart(selectedValue1, selectedValue2);
+        intializeSecondaryChartAll(selectedValue1, selectedValue2);
     }
     else{
         intializeSecondaryChart(selectedValue1, selectedValue2, startDate, endDate);
+        document.getElementById('startDateRange').valueAsDate = new Date();
+        document.getElementById('endDateRange').valueAsDate = new Date();
+
     }
  }
 
 
 //This method is used to populate the secondary chart with the corresponding data from the database.
-function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery){
+function intializeSecondaryChartAll(collectionForQuery, sourceOrDeviceNameForQuery){
     //Getting the current firebase user.
     var user = firebase.auth().currentUser;
     const db = firebase.firestore();
@@ -583,6 +588,7 @@ function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery)
 
 //This method is used to populate the secondary chart with the corresponding data from the database.
 function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery, start, end){
+    console.log("Inside method start: " +  start + "End: " + end);
     //Getting the current firebase user.
     var user = firebase.auth().currentUser;
     const db = firebase.firestore();
@@ -642,7 +648,7 @@ function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery,
             var arrayMeasurementTimeSecondaryChart = [];
             $('#dataTable tbody').empty();
             //Querying the database depending on what device the user selected in the database.
-            db.collection("Users").doc(user.uid).collection(collectionForQuery).where("deviceID","==",sourceOrDeviceNameForQuery).orderBy("timeStamp","asc")
+            db.collection("Users").doc(user.uid).collection(collectionForQuery).where("deviceID","==",sourceOrDeviceNameForQuery).where("timeStamp",">=",start).where("timeStamp","<=",end).orderBy("timeStamp","asc")
             .get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     arrayMeasurementDataSecondaryChart.push(doc.get("watts").toPrecision(2));//Pushing the Wh of the selected device to the array.
@@ -686,6 +692,11 @@ function intializeSecondaryChart(collectionForQuery, sourceOrDeviceNameForQuery,
             });
         }
 }
+
+function secondaryChartSubmitForQuery(){
+
+}
+
 
 //This method is called when the dowload button is clicked in order to download the main chart.
 function downloadMainChart(){

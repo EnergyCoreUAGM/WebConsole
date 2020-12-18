@@ -204,16 +204,18 @@
                   <div class="card">
                     <!-- dropdown menu begins-->
                     <div class="input-group" style="justify-content: center;">
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="startDateRange"/>
-                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="endDateRange"/>
+                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="startDateRange" required/>
+                        <input type="date" class="date-css ml-2 mr-2 mb-2" value="01/01/2018" id="endDateRange" required/>
                         <select id="select1" onchange="generate2Select();" class="select-css ml-2 mr-2 mb-2">
                             <option hidden disabled selected value> -- select an option -- </option>
                             <option value="Generation">Sources</option>
                             <option value="Measurement">Devices</option>
                           </select>
-                          <select id="select2" onchange="generateChartFromSelect();" class="select-css mr-2 ml-2 mb-2">
+                          <!--<select id="select2" onchange="generateChartFromSelect();" class="select-css mr-2 ml-2 mb-2">-->
+                            <select id="select2" class="select-css mr-2 ml-2 mb-2">
                             <option hidden disabled selected value> -- select an option -- </option>
                           </select>
+                          <button type="button" class="btn btn-primary btn-md mr-2 mb-2" onclick="generateChartFromSelect()">Get</button>
 
                           <button class="btn" onclick="downloadSecondaryChart()"><i class="fa fa-download right-button2"></i></button>
 
