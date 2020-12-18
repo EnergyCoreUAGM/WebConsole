@@ -134,7 +134,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       initializeBatteryStatus();
     } else {
       // No user is signed in.
-        window.location = 'index.html';//Redirecting the user back to the login page when they are succesfully logged out.
+//        window.location = 'index.html';//Redirecting the user back to the login page when they are succesfully logged out.
     }
   });
 
