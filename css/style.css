@@ -171,3 +171,12 @@
 .main-navigation {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
 }
+
+#mainChart {
+  width: 100%;
+  height: 100%;
+  }
+  #secondaryChart {
+    width: 100%;
+    height: 100%;
+    }
